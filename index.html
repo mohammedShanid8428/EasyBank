@@ -13,6 +13,13 @@
     <div class="logo">
       <img src="./images/logo.svg" alt="" class="logo-img">
     </div>
+
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
     <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
@@ -20,7 +27,7 @@
       <a href="#">Blog</a>
       <a href="#">Careers</a>
     </nav>
-    <button class="btn">Request Invite</button>
+    <button class="btn-1">Request Invite</button>
   </header>
 
   <section class="hero">
@@ -31,7 +38,10 @@
       <button class="btn">Request Invite</button>
     </div>
     <div class="hero-image">
-      <img src="./images/bg-intro-desktop.svg" alt="" class="bg-shape">
+      <picture>
+        <source srcset="./images/bg-intro-mobile.svg" media="(max-width: 768px)" class="bg-shape">
+        <img src="./images/bg-intro-desktop.svg" alt="Background Shape" class="bg-shape">
+      </picture>
       <img src="./images/image-mockups.png" alt="" class="mockups">
     </div>
   </section>
@@ -129,7 +139,7 @@
           </g>
         </g>
       </svg>
-      <div >
+      <div>
         <a href="#"><img src="./images/icon-facebook.svg" alt="" class="social-icon"></a>
         <a href="#"><img src="./images/icon-instagram.svg" alt="" class="social-icon"></a>
         <a href="#"><img src="./images/icon-youtube.svg" alt="" class="social-icon"></a>

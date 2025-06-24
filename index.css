@@ -34,13 +34,7 @@ body {
   --white: hsl(0, 0%, 100%)
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  /* font-weight: 700; */
+h1,h2,h3,h4,h5,h6 {
   line-height: 1.2;
   color: var(--dark-blue);
 }
@@ -87,6 +81,21 @@ nav a.active {
   color: var(--dark-blue);
 }
 
+.burger{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.burger div{
+  width: 25px;
+  height: 2px;
+  background-color: var(--dark-blue);
+  transition: 0.3s ease;
+}
+
 .btn {
   background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
   color: white;
@@ -101,6 +110,22 @@ nav a.active {
 }
 
 .btn:hover {
+  opacity: 0.8;
+}
+.btn-1{
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  color: white;
+  margin-top: -15px;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.3s ease
+}
+
+.btn-1:hover {
   opacity: 0.8;
 }
 
@@ -301,25 +326,33 @@ footer svg {
     font-size: 16px;
   }
 
+  header{
+    flex-wrap: wrap;
+    padding: 16px 5%;
+  }
+
   nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    flex-direction: column;
-    align-items: center;
     display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white);
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   }
 
   nav.active {
     display: flex;
+  }
+  .btn-1{
+    display: none;
   }
 
   nav a {
     padding: 12px 0;
     border: none;
     font-size: 1.1rem;
+    text-align: center;
     border-bottom: none;
   }
 
@@ -338,31 +371,41 @@ footer svg {
 
   .hero {
     flex-direction: column-reverse;
-    padding: 40px 5%;
+    padding: 40px 5% ;
     margin-bottom: 2rem;
     text-align: center;
+    position: relative;
   }
 
   .hero-text {
     width: 100%;
-    margin-top: 0;
+    margin-top: 10rem;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.1rem;
+    margin: 0 15px 15px 10px;
   }
 
   .hero-text p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-bottom: 25px;
     max-width: 100%;
   }
 
+  .bg-shape{
+  position: absolute;
+  top: -150px;
+  right: -20px;
+  left: -5px;
+  width: 100vw;
+  z-index: 0;
+  }
+
   .mockups {
-    position: relative;
+    position: absolute;
     width: 100%;
-    top: 0;
+    top: -230px;
     right: 0;
     z-index: 1;
   }
@@ -384,13 +427,13 @@ footer svg {
 
   .features p {
     text-align: center;
-    margin: 10px auto 30px;
-    font-size: 0, 95rem;
+    margin: 10px auto 40px;
+    font-size: 0.9rem;
   }
 
   .feature-list {
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
   }
 
   .feature {
@@ -399,16 +442,16 @@ footer svg {
   }
 
   .feature img {
-    margin: 0 auto 10px;
+    margin: 0 auto 5px;
   }
 
   .feature h4 {
-    font-size: 1.2rem;
-    margin: 15px 0 10px;
+    font-size: 1.3rem;
+    margin: 13px 0 12px;
   }
 
   .feature p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     width: 100%;
   }
 
@@ -455,15 +498,17 @@ footer svg {
     padding: 40px 5%;
   }
 
-  .footer-links{
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+  footer svg {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
   .footer-links a{
     font-size: 0.95rem;
   }
   .social-icon{
     padding: 0 6px;
+    margin-bottom: 20px;
   }
   .footer-right{
     text-align: center;

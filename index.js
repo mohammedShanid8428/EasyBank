@@ -7,3 +7,7 @@ navLinks.forEach(item => {
     item.classList.add("active")
   })
 })
+
+ function toggleMenu() {
+      document.querySelector("nav").classList.toggle("active");
+    }
