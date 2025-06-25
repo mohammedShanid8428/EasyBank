@@ -9,7 +9,7 @@ navLinks.forEach(item => {
   })
 })
 
-const nav = document.querySelector("nav");
+const nav = document.querySelector(".nav-container");
 const burger = document.querySelector(".burger");
 const overlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll("nav a");
