@@ -51,11 +51,11 @@ header {
   justify-content: space-between;
   align-items: center;
   position: sticky;
+  position: relative;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
 }
-
 
 nav {
   display: flex;
@@ -87,13 +87,14 @@ nav a.active {
   cursor: pointer;
   gap: 5px;
   margin-left: auto;
+  z-index: 20;
 }
 
 .burger div{
   width: 25px;
-  height: 2px;
+  height: 3px;
   background-color: var(--dark-blue);
-  transition: 0.3s ease;
+  transition: 0.4s ease;
 }
 
 .btn {
@@ -328,18 +329,43 @@ footer svg {
 
   header{
     flex-wrap: wrap;
-    padding: 16px 5%;
+    padding: 20px 10%;
+  }
+
+  .overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+    background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  }
+
+  .overlay.active{
+    display: block;
+  }
+
+  .logo{
+    margin-top: 10px;
   }
 
   nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--white);
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  }
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 98px;
+  right: 7%;
+  width: 380px;
+  /* height: 200px; */
+  background-color: var(--white);
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  z-index: 15;
+}
 
   nav.active {
     display: flex;
@@ -349,25 +375,42 @@ footer svg {
   }
 
   nav a {
-    padding: 12px 0;
+    /* display: none; */
+    flex-direction: column;
+    /* padding: 2px 0; */
+    padding-bottom: 0;
     border: none;
-    font-size: 1.1rem;
+    color: var(--dark-blue);
+    font-size: 1.4rem;
+    font-weight: 600;
     text-align: center;
     border-bottom: none;
   }
 
-  .burger {
-    display: block;
-    cursor: pointer;
-  }
+.burger {
+  display: block;
+  cursor: pointer;
+  z-index: 30;
+}
 
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--dark-blue);
-    margin: 4px 0;
-    transition: 0.4s;
-  }
+.burger-icon {
+  width: 28px;
+  height: auto;
+  display: none;
+}
+
+.burger-icon.open {
+  display: block;
+}
+.burger.open .open {
+  display: none;
+}
+
+.burger.open .close {
+  display: block;
+}
+
+
 
   .hero {
     flex-direction: column-reverse;
