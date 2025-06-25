@@ -357,7 +357,7 @@ footer svg {
   flex-direction: column;
   position: absolute;
   top: 98px;
-  right: 7%;
+  /* right: 7%; */
   width: 380px;
   /* height: 200px; */
   background-color: var(--white);
