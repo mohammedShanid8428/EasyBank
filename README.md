@@ -50,6 +50,13 @@ Implementing scroll-based layout transitions using CSS
 
 Clean, maintainable frontend architecture
 
+
+📸 Screenshots:
+
+
+![Homepage Preview](./images/desktop.png)  
+![Mobile View](./images/mobile.png)
+
 🔗 Project Links
 
 🌐 Live Website: [https://mohammedshanid8428.github.io/EasyBank/]
